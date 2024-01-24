@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const { routes } = require("./routes/admin.route");
 const shopRoutes = require("./routes/shop.route");
+app.set("view engine", "pug");
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/admin", routes);

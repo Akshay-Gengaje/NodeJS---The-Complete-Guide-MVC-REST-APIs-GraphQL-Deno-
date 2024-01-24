@@ -5,7 +5,8 @@ const rootPath = require("../utils/path");
 
 const products = [];
 router.get("/add-product", function (req, res) {
-  res.sendFile(path.join(rootPath, "views", "add-product.html"));
+  // res.sendFile(path.join(rootPath, "views", "add-product.html"));
+  res.render("add-product");
 });
 
 router.post("/add-product", function (req, res) {
