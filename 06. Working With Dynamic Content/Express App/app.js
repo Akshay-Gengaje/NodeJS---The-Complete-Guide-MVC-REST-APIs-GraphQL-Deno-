@@ -1,23 +1,24 @@
-const path = require("path");
-const rootPath = require("./utils/path");
-const express = require("express");
-const bodyParser = require("body-parser");
+const path = require('path');
+
+const express = require('express');
+const bodyParser = require('body-parser');
+
 const app = express();
-const { routes } = require("./routes/admin.route");
-const shopRoutes = require("./routes/shop.route");
-app.set("view engine", "pug");
+
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+
+const adminData = require('./routes/admin');
+const shopRoutes = require('./routes/shop');
+
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use("/admin", routes);
-
+app.use('/admin', adminData.routes);
 app.use(shopRoutes);
 
-app.use(express.static(path.join(__dirname, "public")));
-app.get("/", (req, res, next) => {
-  res.send("<h1>Welcome to the backend!</h1>");
+app.use((req, res, next) => {
+  res.status(404).render('404', { pageTitle: 'Page Not Found' });
 });
 
-app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(rootPath, "views", "404.html"));
-});
 app.listen(3000);
