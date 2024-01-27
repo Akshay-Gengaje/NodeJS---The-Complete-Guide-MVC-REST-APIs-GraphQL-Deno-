@@ -6,6 +6,8 @@ const app = express();
 const { routes } = require("./routes/admin.route");
 const shopRoutes = require("./routes/shop.route");
 app.set("view engine", "pug");
+app.set("view", "views");
+
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/admin", routes);
