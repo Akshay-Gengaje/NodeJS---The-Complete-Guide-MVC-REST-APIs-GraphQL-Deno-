@@ -1,0 +1,16 @@
+[
+    {
+        "id": "123",
+        "title": "A Book",
+        "imageUrl": "https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg",
+        "description": "This is an awesome book!",
+        "price": "19"
+    },
+    {
+        "title": "A Notebook",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRemQqDpPcMfTQiUZMqWERAJFbrHVc0sBnxaheW8ndW7aQYHYNkE4x-nXIVQHOWkE0sUHM__98pY6IhLtLOIgqZLLLmB9DVsZsMXyqvlSEtig0tVTFxCRi3KA",
+        "description": "Classmate Long Notebook Single Line Ruling 140 Pages\r\n",
+        "price": "30",
+        "id": "0.9762472216980296"
+    }
+]
